@@ -44,7 +44,7 @@ Program ini merupakan halaman web sederhana yang dibuat menggunakan HTML. Halama
 # Penggunaan
 
 1.  **Menjalankan Program:**
-    -   Buka file `about.html` menggunakan web browser untuk melihat hasilnya.
+    -   Buka file `index.html` menggunakan web browser untuk melihat hasilnya.
 2.  **Navigasi:**
     -   Klik tautan "Home" untuk menuju ke halaman utama "Landing Page".
     -   Klik tautan "About" untuk menuju ke halaman "About"
