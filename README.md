@@ -7,7 +7,7 @@ Program ini merupakan halaman web sederhana yang dibuat menggunakan HTML. Halama
 1. **Header (`<header>`):**
 	-   Menampilkan judul halaman utama "Welcome"
 2. **Navigasi (`<nav>`):**
-	-   Berisi tautan navigasi ke halaman utama (`index html`) dan halaman "About" (`about.html`)
+	-   Berisi tautan navigasi ke halaman utama (`index.html`) dan halaman "About" (`about.html`)
 3. **Isi Utama (`<main>`):**
     -   Menampilkan pesan selamat datang.
     -   Bagian "Login" (`<section>`):
@@ -44,7 +44,7 @@ Program ini merupakan halaman web sederhana yang dibuat menggunakan HTML. Halama
 # Penggunaan
 
 1.  **Menjalankan Program:**
-    -   Buka file `about.html` menggunakan web browser untuk melihat hasilnya.
+    -   Buka file `index.html` menggunakan web browser untuk melihat hasilnya.
 2.  **Navigasi:**
     -   Klik tautan "Home" untuk menuju ke halaman utama "Landing Page".
     -   Klik tautan "About" untuk menuju ke halaman "About"
