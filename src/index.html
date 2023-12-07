@@ -4,32 +4,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Landing Page</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
             <h1>Welcome</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </nav>
         </header>
-        
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-        </nav>
 
         <main>
             <h2>Welcome to Our Landing Page</h2>
+            <p>Please login to access other features.</p>
 
             <section class="login">
-                <p>Please login to access other features.</p>
                 <form method="post">
                     <label for="username">Username: </label>
+                    <br>
                     <input type="text" id="username" placeholder="Enter your username">
                     <br>
                     <label for="pass">Password: </label>
+                    <br>
                     <input type="password" id="pass" placeholder="Enter your password">
+                    <button type="submit">Login</button>
                 </form>
-    
-                <button type="submit">Login</button>
-                <br>
             </section>
 
             <figure>
