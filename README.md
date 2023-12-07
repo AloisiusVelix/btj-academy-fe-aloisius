@@ -59,39 +59,39 @@ Program ini merupakan halaman web sederhana yang dibuat menggunakan HTML. Halama
 # Styling CSS yang Digunakan
 1.  **Desain Body**
 
--   Desain keseluruhan untuk body mencakup penempatan teks di tengah, penggunaan jenis huruf tertentu, dan penataan skema warna.
+    -   Desain keseluruhan untuk body mencakup penempatan teks di tengah, penggunaan jenis huruf tertentu, dan penataan skema warna.
 
 2.  **Desain Header**
 
--   Header memiliki warna latar belakang, dan elemen h1 di dalamnya memiliki desain khusus untuk warna, padding, dan ukuran font.
+    -   Header memiliki warna latar belakang, dan elemen h1 di dalamnya memiliki desain khusus untuk warna, padding, dan ukuran font.
 
 3.  **Desain Navigasi**
 
--   Menu navigasi memiliki warna latar belakang tertentu, dan tautan anchor memiliki desain untuk padding, warna, dan efek hover.
+    -   Menu navigasi memiliki warna latar belakang tertentu, dan tautan anchor memiliki desain untuk padding, warna, dan efek hover.
 
 4.  **Desain Konten Utama**
 
--   Area konten utama diatur dengan margin, border-radius, warna latar belakang, dan efek bayangan kotak untuk tampilan kartu.
--   Heading di dalam konten utama memiliki pengaturan warna, ukuran font, dan margin yang spesifik.
+    -   Area konten utama diatur dengan margin, border-radius, warna latar belakang, dan efek bayangan kotak untuk tampilan kartu.
+    -   Heading di dalam konten utama memiliki pengaturan warna, ukuran font, dan margin yang spesifik.
 
 5.  **Desain Formulir**
 
--   Formulir di tengah, memiliki lebar tertentu, padding, border-radius, dan bayangan kotak untuk tampilan rapi.
--   Label dan tombol memiliki desain khusus untuk warna, ukuran, dan efek hover.
+    -   Formulir di tengah, memiliki lebar tertentu, padding, border-radius, dan bayangan kotak untuk tampilan rapi.
+    -   Label dan tombol memiliki desain khusus untuk warna, ukuran, dan efek hover.
 
 6.  **Desain Artikel dan Footer**
 
--   Artikel memiliki padding dan pengaturan ukuran font untuk keterbacaan.
--   Footer memiliki warna latar belakang, warna teks putih, ukuran font, dan padding.
+    -   Artikel memiliki padding dan pengaturan ukuran font untuk keterbacaan.
+    -   Footer memiliki warna latar belakang, warna teks putih, ukuran font, dan padding.
 
 7.  **Desain Bagian Profil**
 
--   Bagian profil termasuk gambar latar belakang dengan ukuran cover.
--   Bagian identitas memiliki tampilan inline-block, penataan vertikal, dan pengaturan margin tertentu.
--   Tautan anchor dalam bagian identitas memiliki warna, ukuran font, dan efek hover.
--   Gambar profil memiliki border-radius untuk tampilan melingkar.
+    -   Bagian profil termasuk gambar latar belakang dengan ukuran cover.
+    -   Bagian identitas memiliki tampilan inline-block, penataan vertikal, dan pengaturan margin tertentu.
+    -   Tautan anchor dalam bagian identitas memiliki warna, ukuran font, dan efek hover.
+    -   Gambar profil memiliki border-radius untuk tampilan melingkar.
 
 8.  **Desain Bagian Tentang Saya, Pendidikan, dan Pengalaman**
 
--   Desain spesifik diterapkan pada bagian-bagian berbeda seperti "aboutme," "education," dan "experience," termasuk warna latar belakang, ukuran font, dan padding.
--   Daftar dalam bagian pendidikan memiliki pengaturan padding dan desain khusus untuk first-child.
+    -   Desain spesifik diterapkan pada bagian-bagian berbeda seperti "aboutme," "education," dan "experience," termasuk warna latar belakang, ukuran font, dan padding.
+    -   Daftar dalam bagian pendidikan memiliki pengaturan padding dan desain khusus untuk first-child.
