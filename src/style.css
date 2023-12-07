@@ -111,6 +111,8 @@ footer {
 }
 
 .profile {
+    background-image: url("bg-profil.jpg");
+    background-size: cover;
     padding-top: 20px;
     padding-bottom: 30px;
 }
