@@ -1,74 +1,90 @@
+:root {
+    --color-main: #212121;
+    --color-highlight: #FA9A05;
+    --color-secondary: #111111;
+    background-color: var(--color-secondary);
+    font-size: 16px;
+}
+
 body {
-    text-align: center;
-    display: block;
-    margin: 0;
-    padding: 0;
+    margin: 2vh;
+    background-color: var(--color-main);
+    color: white;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #4C4C6D;
+    border-radius: 10px;
 }
 
 header {
-    background-color: #4C4C6D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
 }
 
-header h1 {
-    color: white;
-    padding: 20px;
-    margin: 0;
-    font-size: 40px;
+.logo img,
+.logo h1{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo h1 {
+    margin-left: 10px;
+    color: var(--color-highlight)
 }
 
 nav {
-    background-color: #1B9C85;
-    padding: 20px;
+    display: flex;
 }
 
 nav a {
-    padding: 10px;
-    color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px 3vw;
     text-decoration: none;
-    font-size: 18px;
+    color: white;
+    margin-left: 20px;
+    transition: background-color 1s ease;
+    transition: border-color 1s ease;
 }
 
 nav a:hover {
-    color: #FFE194;
+    border: 1px solid var(--color-highlight);
+    background-color: var(--color-highlight);
 }
 
-main {
-    margin: 16px;
+.landing-page {
+    align-items: center;
+    padding: 8vh 5vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.login {
+    padding: 6vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 40%;
     border-radius: 10px;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    animation: enterFromLeft 1.5s ease-in-out forwards;
 }
 
-main h2 {
-    color: #4C4C6D;
-    margin-left: 30px;
-    padding-top: 20px;
-    text-align: left;
-    font-size: 20px;
-    box-sizing: border-box;
+.login h2 {
+    margin: 0;
+    padding: 0;
 }
 
-main h2 ~ p {
-    color: #4C4C6D;
-    margin-left: 30px;
-    text-align: left;
-    font-size: 12px;
-    margin-bottom: 30px;
+.login p {
+    margin-bottom: 5vh;
 }
 
 form {
-    margin: auto;
-    width: 40%;
+    margin: 0;
     text-align: left;
-    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 label {
-    color: #4C4C6D;;
+    color: var(--color-highlight);
 }
 
 button {
@@ -76,14 +92,17 @@ button {
     margin-top: 20px;
     width: 100%;
     padding: 10px;
-    background-color: #1B9C85;
     color: white;
+    background-color: var(--color-main);
+    border: 1px solid;
     border-radius: 10px;
-    border: none;
+    transition: background-color 1s ease;
+    transition: border-color 1s ease;
 }
 
 button:hover {
-    background-color: #4C4C6D;
+    background-color: var(--color-highlight);
+    border: 1px solid var(--color-highlight);
 }
 
 input {
@@ -94,121 +113,123 @@ input {
     box-sizing: border-box;
     border-radius: 10px;
     border: none;
-    background-color:#E8F6EF;
+    background-color:white;
 }
 
-article {
-    margin: auto;
-    font-size: 12px;
-    padding: 10px;
+.content {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 5vw;
+    animation: showUp 2s ease-in-out forwards;
 }
 
 footer {
-    background-color: #4C4C6D;
-    color: white;
-    font-size: 12px;
-    padding: 30px;
+    text-align: center;
+    padding: 2vh;
+}
+
+.about-page {
+    flex-direction: column;
 }
 
 .profile {
-    background-image: url("bg-profil.jpg");
+    width: 100%;
+    background-image: url("bg-zaga.jpg");
     background-size: cover;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding: 24vh 5vw;
+    box-sizing: border-box;
+    background-position: right;
+    animation: enterFromLeft 1.5s ease-in-out forwards;
 }
 
-.profile img,
-.identity {
-    display: inline-block;
-    vertical-align: middle;
+.profile p:first-child {
+    color: var(--color-highlight);
+    font-weight: 700;
+    font-size: 4rem;
+    width: 60%;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 1em;
+    animation: enterFromLeft 1.5s ease-in-out forwards;
 }
 
-.identity {
-    margin-left: 16px;
-    text-align: left;
-    font-size: 18px;
-}
-
-.identity p {
-    font-size: 2vw;
+.nav-about a {
     margin: 0;
-    margin-top: 10px;
-    margin-bottom: 80px;
-}
-
-.identity p:first-child {
-    font-size: 3vw;
-    font-weight: 500;
-    margin: 0;
-}
-
-.identity a {
-    font-size: 18px;
-    padding-right: 30px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px 2vw;
     text-decoration: none;
-    color: #1B9C85;
+    color: white;
+    margin-right: 20px;
 }
 
-.identity a:hover {
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.profile img {
-    border-radius: 50%;
-    margin-right: 10px;
+.nav-about a:hover {
+    border: 1px solid var(--color-highlight);
+    background-color: var(--color-highlight);
 }
 
 #aboutme {
-    background-color: #E8F6EF;
-    margin: 0;
-    padding-top: 40px;
-    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5vw;
+    align-items: center;
+}
+
+#aboutme img {
+    border-radius: 50%;
+    background-image: url(logo-zaga.png);
+    background-size: cover;
+    background-position: center;
+    transition: width 0.5s ease-in-out;
+}
+
+#aboutme img:hover {
+    width: 28%;
+}
+
+#aboutme article {
+    margin-left: 2vw;
+    padding: 0 0 0 5vw;
 }
 
 h3 {
-    font-size: 24px;
-    color: #1B9C85;
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    color: var(--color-highlight);
 }
 
 #aboutme p {
-    font-size: 18px;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    padding-top: 30px;
-}
-
-#education ul {
-    margin: 0;
-    padding: 0;
-    padding-left: 50px;
-    padding-right: 20px;
-    margin-top: 20px;
-    margin-left: 30px;
-    text-align: left;
-}
-
-#education li:first-child {
-    font-size: 18px;
-    font-weight: 500;
-}
-
-#education li + li {
-    list-style: none;
+    text-align: justify;
+    text-align-last: left;
+    font-size: 1.2rem;
 }
 
 #education {
-    padding-top: 20px;
-    padding-bottom: 50px;
+    background-color: var(--color-secondary);
+    padding: 5vw;
+}
+
+#education h4 {
+    font-size: 1.1rem;
+    background-color: var(--color-highlight);
+    padding: 10px;
+}
+
+#education p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.details li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: 100;
+    list-style: disc;
 }
 
 #experience {
-    background-color: #E8F6EF;
+    padding: 5vw;
     text-align: center;
-    padding: 30px;
-    padding-bottom: 50px;
 }
 
 #experience table {
@@ -223,15 +244,115 @@ h3 {
 }
 
 #experience tr:first-child {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
 }
 
 #experience tr:nth-child(2) {
-    font-size: 16px;
+    font-size: 1rem;
     font-style: italic;
 }
 
 #experience tr:nth-child(3) {
-    font-size: 12px;
+    font-size: 0.75rem;
+}
+
+@media screen and (max-width: 900px) {
+    .landing-page {
+        flex-direction: column;
+    }
+
+    .login {
+        width: 70%;
+    }
+
+    #aboutme {
+        flex-direction: column;
+        padding: 1.5vw 5vw;
+    }
+
+    #aboutme img {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    #aboutme img:hover {
+        width: 55%;
+    }
+
+    #aboutme article {
+        text-align: center;
+        margin: 0;
+        padding: 1vw;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 1vh 0;
+    }
+
+    .nav-about a {
+        margin: 1vh 0;
+    }
+
+    #aboutme p {
+        font-size: 1rem;
+    }
+
+    .details li {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .profile p:first-child {
+        font-size: 3rem;
+    }
+
+    #experience tr:first-child {
+        font-size: 1rem;
+    }
+
+    #experience tr:nth-child(2) {
+        font-size: 0.75rem;
+    }
+    
+    #experience tr:nth-child(3) {
+        font-size: 0.7rem;
+    }
+
+}
+
+@keyframes enterFromLeft {
+    from {
+        opacity: 0; 
+        transform: translateX(-100%); 
+    }
+    80% {
+        transform: translateX(+5%);
+    }
+    90% {
+        transform: translateX(-2%);
+    }
+    to {
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+@keyframes showUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;  
+    }
 }
