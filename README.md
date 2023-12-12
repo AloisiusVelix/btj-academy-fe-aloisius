@@ -1,11 +1,11 @@
 # Landing Page HTML
 
 ### Deskripsi Program
-Program ini merupakan halaman web sederhana yang dibuat menggunakan HTML. Halaman ini dirancang sebagai halaman "Landing Page" yang menyajikan beberapa elemen seperti header, navigasi, formulir, gambar, kutipan dan footer dengan styling yang diatur dari file (`style.css`).
+Program ini merupakan halaman web sederhana yang dibuat menggunakan HTML. Halaman ini dirancang sebagai halaman "Landing Page" yang menyajikan beberapa elemen seperti header, navigasi, formulir, gambar, kutipan dan footer dengan styling yang diatur dari file (`style.css`) dan beberapa fungsi yang diatur dari file (`script.js`).
 
 ### Struktur Program
 1. **Header (`<header>`):**
-    -   Menampilkan logo (`logo-zaga.png').
+    -   Menampilkan logo (`logo-zaga.png') yang jika ditekan dapat berputar 360 derajat.
     -   Menampilkan judul halaman utama "Welcome".
     -   Berisi tautan navigasi (`<nav>`) ke halaman utama (`index.html`) dan halaman "About" (`about.html`).
 2. **Isi Utama (`<main>`):**
@@ -24,11 +24,11 @@ Program ini merupakan halaman web sederhana yang dibuat menggunakan HTML. Halama
 
 # About Me Page HTML
 ### Deskripsi Program
-Program ini merupakan halaman web sederhana yang dibuat menggunakan HTML. Halaman ini bertindak sebagai halaman "About Me" yang menampilkan informasi tentang profil pribadi, latar belakan pendidikan, pengalaman kerja dan moto hidup dari pengembang dengan styling yang diatur dari file (`style.css`).
+Program ini merupakan halaman web sederhana yang dibuat menggunakan HTML. Halaman ini bertindak sebagai halaman "About Me" yang menampilkan informasi tentang profil pribadi, latar belakan pendidikan, pengalaman kerja dan moto hidup dari pengembang dengan styling yang diatur dari file (`style.css`) dan beberapa fungsi yang diatur dari file (`script.js`).
 
 ### Struktur Program
 1.  **Header (`<header>`):**
-    -   Menampilkan logo (`logo-zaga.png').
+    -   Menampilkan logo (`logo-zaga.png') yang jika ditekan dapat berputar 360 derajat.
     -   Menampilkan judul halaman utama "Welcome".
     -   Berisi tautan navigasi (`<nav>`) ke halaman utama (`index.html`) dan halaman "About" (`about.html`).
 2.  **Isi Utama (`<main>`):**
@@ -52,7 +52,12 @@ Program ini merupakan halaman web sederhana yang dibuat menggunakan HTML. Halama
 2.  **Navigasi:**
     -   Klik tautan "Home" untuk menuju ke halaman utama "Landing Page".
     -   Klik tautan "About" untuk menuju ke halaman "About".
-3.  **Navigasi About:**
+3.  **Login Form**
+    -   Masukkan Username serta Password untuk menuju ke halaman "About".
+    -   Masukkan Username (minimal 6 karakter).
+    -   Masukkan Password (minimal memiliki 1 karakter huruf besar, 1 karakter huruf kecil, 1 karakter simbol dan 1 karakter angka).
+    -   Klik tombol "Login" untuk melanjutkan ke halaman "About".
+4.  **Navigasi About:**
     -   Klik tautan "About Me" untuk menuju ke bagian "About Me".
     -   Klik tautan "Education" untuk menuju ke bagian "Education".
     -   Klik tautan "Work Experience" untuk menuju ke bagian "Work Experience".
@@ -128,3 +133,38 @@ Program ini merupakan halaman web sederhana yang dibuat menggunakan HTML. Halama
 ### Catatan:
 
 -   CSS menggunakan praktik modern seperti flexbox, grid, transisi, dan animasi untuk tata letak yang dinamis dan menarik secara visual. Penyesuaian dilakukan untuk desain responsif, memastikan pengalaman pengguna yang baik di berbagai ukuran layar.
+
+# Fungsi Script yang Digunakan
+### Rotate Logo (`rotateImage()`):
+
+-   Fungsi ini dipanggil ketika gambar logo diklik.
+-   Secara bertahap memutar gambar logo 360 derajat setiap kali dipanggil.
+
+### Login (`login(event)`):
+
+-   Fungsi ini dipanggil saat formulir login disubmit.
+-   Mencegah pengiriman formulir dengan menggunakan `event.preventDefault()`.
+-   Memvalidasi username dan password dengan memanggil fungsi `validateUsername()` dan `validatePass()`.
+-   Menampilkan pesan kesalahan (jika ada) di elemen HTML yang sesuai.
+-   Jika tidak ada kesalahan, pengguna diarahkan ke halaman "about.html".
+
+### Validate Username (`validateUsername()`):
+
+-   Memvalidasi input username.
+-   Memeriksa apakah username tidak boleh kosong dan harus memiliki setidaknya 6 karakter.
+-   Menampilkan pesan kesalahan di elemen HTML yang sesuai.
+
+### Validate Password (`validatePass()`):
+
+-   Memvalidasi input password.
+-   Memeriksa apakah password tidak boleh kosong dan harus memenuhi kriteria: setidaknya 1 huruf kecil, 1 huruf besar, 1 angka, dan 1 simbol.
+-   Menampilkan pesan kesalahan di elemen HTML yang sesuai.
+
+### CapsLock Alert:
+
+-   Menampilkan peringatan jika tombol Caps Lock aktif ketika pengguna memasukkan kata sandi.
+
+### Show & Hide Password (`togglePasswordVisibility()`):
+
+-   Fungsi ini dipanggil saat checkbox "Show Password" diubah.
+-   Mengubah tipe input kata sandi antara "text" (untuk ditampilkan) dan "password" (untuk disembunyikan).
