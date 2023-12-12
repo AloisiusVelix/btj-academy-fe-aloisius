@@ -32,6 +32,10 @@ header {
     color: var(--color-highlight)
 }
 
+.logo img {
+    transition: transform 1.5s ease-in-out;
+}
+
 nav {
     display: flex;
 }
@@ -109,11 +113,40 @@ input {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    margin-bottom: 20px;
     box-sizing: border-box;
     border-radius: 10px;
     border: none;
     background-color:white;
+}
+
+.showPass {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.showPass input {
+    width: max-content;
+    padding: 0;
+    margin: 0 2% 0 0;
+    align-items: baseline;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+.message {
+    border: 1px;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.error {
+    color: #E3242B;
+    font-weight: 600;
+    font-size: 0.75rem;
 }
 
 .content {
