@@ -12,7 +12,7 @@ Program ini merupakan halaman web sederhana yang dibuat menggunakan HTML. Halama
     -   Menampilkan pesan selamat datang.
     -   Bagian "Login" (`<section>`):
         -   Menampilkan pesan untuk login.
-        -   Formulir login dengan dua input (Username dan Password).
+        -   Formulir login dengan dua input (Username dan Password) yang dilengkapi dengan validator dan peringatan Capslock jika menyala.
         -   Tombol "Login" (tombol submit).
     -   Gambar (`<figure>`):
         -   Menampilkan logo (`logo-zaga.png').
