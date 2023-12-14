@@ -135,6 +135,7 @@ Program ini merupakan halaman web sederhana yang dibuat menggunakan HTML. Halama
 -   CSS menggunakan praktik modern seperti flexbox, grid, transisi, dan animasi untuk tata letak yang dinamis dan menarik secara visual. Penyesuaian dilakukan untuk desain responsif, memastikan pengalaman pengguna yang baik di berbagai ukuran layar.
 
 # Fungsi Script yang Digunakan
+Script JavaScript (`script.js`) yang digunakan telah dimodifikasi menggunakan library JQuery
 ### Rotate Logo (`rotateImage()`):
 
 -   Fungsi ini dipanggil ketika gambar logo diklik.
@@ -157,7 +158,7 @@ Program ini merupakan halaman web sederhana yang dibuat menggunakan HTML. Halama
 ### Validate Password (`validatePass()`):
 
 -   Memvalidasi input password.
--   Memeriksa apakah password tidak boleh kosong dan harus memenuhi kriteria: setidaknya 1 huruf kecil, 1 huruf besar, 1 angka, dan 1 simbol.
+-   Memeriksa apakah password tidak boleh kosong dan harus memenuhi kriteria: setidaknya 1 huruf kecil, 1 huruf besar, dan terdiri minimal 4 karakter.
 -   Menampilkan pesan kesalahan di elemen HTML yang sesuai.
 
 ### CapsLock Alert:
@@ -168,3 +169,8 @@ Program ini merupakan halaman web sederhana yang dibuat menggunakan HTML. Halama
 
 -   Fungsi ini dipanggil saat checkbox "Show Password" diubah.
 -   Mengubah tipe input kata sandi antara "text" (untuk ditampilkan) dan "password" (untuk disembunyikan).
+
+### Show Element in Viewport:
+
+-   Fungsi ini digunakan untuk transisi dalam menampilkan elemen dengan id aboutme, education, dan experience.
+-   Transisi akan berjalan ketika elemen telah berada di dalam viewport, dan akan hilang jika tidak berada di viewport
