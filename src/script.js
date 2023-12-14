@@ -85,6 +85,10 @@ function validatePass() {
     else {
         var passError = [];
 
+        if (password.length < 4) {
+            passError.push('At least 4 characters long.');
+        }
+        
         if (!/[a-z]/.test(password)) {
             passError.push('At least 1 lowercase letter');
         }
