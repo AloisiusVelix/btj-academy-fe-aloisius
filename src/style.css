@@ -4,14 +4,19 @@
     --color-secondary: #111111;
     background-color: var(--color-secondary);
     font-size: 16px;
+    align-items: center;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 2vh;
     background-color: var(--color-main);
     color: white;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-radius: 10px;
+    min-height: 96vh;
 }
 
 header {
@@ -58,14 +63,14 @@ nav a:hover {
 
 .landing-page {
     align-items: center;
-    padding: 8vh 5vw;
+    padding: 4vh 5vw;
     display: flex;
     justify-content: space-between;
 
 }
 
 .login {
-    padding: 6vh;
+    padding: 6vh 5vw;
     background-color: rgba(255, 255, 255, 0.1);
     width: 40%;
     border-radius: 10px;
@@ -165,7 +170,7 @@ footer {
     flex-direction: column;
 }
 
-.profile {
+#profile {
     width: 100%;
     background-image: url("bg-zaga.jpg");
     background-size: cover;
@@ -175,7 +180,7 @@ footer {
     animation: enterFromLeft 1.5s ease-in-out forwards;
 }
 
-.profile p:first-child {
+#profile p:first-child {
     color: var(--color-highlight);
     font-weight: 700;
     font-size: 4rem;
@@ -261,8 +266,12 @@ h3 {
 }
 
 #experience {
-    padding: 5vw;
+    padding: 6vw 5vw;
     text-align: center;
+}
+
+#experience h3 {
+    margin-bottom: 80px;
 }
 
 #experience table {
@@ -296,7 +305,7 @@ h3 {
     }
 
     .login {
-        width: 70%;
+        width: 80%;
     }
 
     #aboutme {
@@ -317,6 +326,10 @@ h3 {
         text-align: center;
         margin: 0;
         padding: 1vw;
+    }
+
+    #aboutme p {
+        font-size: 1.25rem;
     }
 
 }
@@ -346,7 +359,7 @@ h3 {
         font-size: 2rem;
     }
 
-    .profile p:first-child {
+    #profile p:first-child {
         font-size: 3rem;
     }
 
@@ -388,4 +401,13 @@ h3 {
     to {
         opacity: 1;  
     }
+}
+
+.main-content {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.visible {
+    opacity: 1;
 }

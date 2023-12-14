@@ -1,12 +1,12 @@
-// Rotate Logo
+//JQuery Rotate Logo
 let rotation = 0;
 function rotateImage() {
     rotation += 360;
-    document.getElementById('logo').style.transform = `rotate(${rotation}deg)`;
+    $('#logo').css('transform', `rotate(${rotation}deg)`);
 }
 
-// Login
-function login(event) {
+// JQuery Valdasi
+$('#login-form').submit(function (event) {
     event.preventDefault();
 
     let errorUsername = '';
@@ -15,19 +15,43 @@ function login(event) {
     errorUsername = validateUsername();
     errorPassword = validatePass();
 
-    document.getElementById('errorUsername').innerHTML = errorUsername;
-    document.getElementById('errorPassword').innerHTML = errorPassword;
+    $('#errorUsername').html(errorUsername);
+    $('#errorPassword').html(errorPassword);
 
     if (errorPassword === '' && errorUsername === '') {
-        window.location.href = 'about.html';
+        login();
     }
-    
-    return errorUsername === '' && errorPassword === '' && true;
+
+    return errorUsername === '' && errorPassword === '';
+});
+
+// JQuery Login
+function login() {
+    let username = $('#username').val();
+    let password = $('#pass').val();
+
+    $.ajax({
+        url: 'https://dummyjson.com/auth/login',
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({
+            username: username,
+            password: password,
+        }),
+        statusCode: {
+            200: function() {
+                window.location.href = 'about.html';
+            },
+        },
+        error: function (error) {
+            console.error('Error:', error);
+        }
+    })
 }
 
-// Username Validation
+// JQuery Username Validation
 function validateUsername() {
-    let username = document.getElementById('username').value;
+    let username = $('#username').val();
     let errorUsername = '';
 
     if (username.trim() === '') {
@@ -44,14 +68,14 @@ function validateUsername() {
         }
     }
 
-    document.getElementById('errorUsername').innerHTML = errorUsername;
+    $('#errorUsername').html(errorUsername);
 
     return errorUsername;
 }
 
-// Pass Validation
+// JQuery Pass Validation
 function validatePass() {
-    let password = document.getElementById('pass').value;
+    let password = $('#pass').val();
     let errorPassword = '';
 
     if (password.trim() === '') {
@@ -69,13 +93,13 @@ function validatePass() {
             passError.push('At least 1 uppercase letter');
         }
 
-        if (!/\d/.test(password)) {
-            passError.push('At least 1 number');
-        }
+        // if (!/\d/.test(password)) {
+        //     passError.push('At least 1 number');
+        // }
 
-        if (!/[@$!%*?&]/.test(password)) {
-            passError.push('At least 1 symbol');
-        }
+        // if (!/[@$!%*?&]/.test(password)) {
+        //     passError.push('At least 1 symbol');
+        // }
 
         if (passError.length > 0) {
             errorPassword = 'Password must have: ' + passError.join(', ');
@@ -86,24 +110,68 @@ function validatePass() {
         }
     }
 
-    document.getElementById('errorPassword').innerHTML = errorPassword;
+    $('#errorPassword').html(errorPassword);
 
     return errorPassword;
 }
 
-// CapsLock
-document.querySelector('#pass').addEventListener('keyup', function (e) {
-    if (e.getModifierState('CapsLock')) {
-        document.querySelector('#capslock-allert').textContent = 'Caps lock is on!';
-    } else {
-        document.querySelector('#capslock-allert').textContent = '';
-    }
+// JQuery Capslock
+$('#pass').on('keyup', function (e) {
+    $('#capslock-allert').text(e.originalEvent.getModifierState('CapsLock') ? 'Caps lock is on!' : '');
 });
 
-// Show & Hide Password
-function togglePasswordVisibility() {
-    var passwordInput = document.getElementById('pass');
-    var showPasswordCheckbox = document.getElementById('showPassword');
+// JQuery Show & Hide Password
+$('#showPassword').change(function() {
+    $('#pass').attr('type', $(this).prop('checked') ? 'text' : 'password');
+});
 
-    passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
+// Animation isElementInViewport
+var sections = $('.main-content');
+var currentIndex = 0;
+var lastIndex = 0;
+
+$(window).on('scroll', function () {
+    sections.each(function (index) {
+        var isVisible = isElementInViewport($(this));
+        console.log(index);
+        if (isVisible) {
+            $(this).addClass('visible');
+            lastIndex = index;
+        }
+        else if (index + 1 <= currentIndex) {
+            $(this).addClass('visible');
+        }
+        else {
+            $(this).removeClass('visible');
+        }
+});
+});
+
+function isElementInViewport($element) {
+    var rect = $element[0].getBoundingClientRect();
+    if ($element.attr('id') === 'aboutme') {
+        return (
+            rect.top >= 0 - 200 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 200 &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    } else {
+        // Jika bukan elemen dengan ID "aboutme", tidak perlu menambahkan offset
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 300 &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
 }
+
+// Update currentIndex when a new section comes into view
+$(window).on('scroll', function () {
+    sections.each(function (index) {
+        if (isElementInViewport($(this))) {
+            currentIndex = index;
+        }
+    });
+});
