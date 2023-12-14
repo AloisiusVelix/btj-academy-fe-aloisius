@@ -1,0 +1,391 @@
+:root {
+    --color-main: #212121;
+    --color-highlight: #FA9A05;
+    --color-secondary: #111111;
+    background-color: var(--color-secondary);
+    font-size: 16px;
+}
+
+body {
+    margin: 2vh;
+    background-color: var(--color-main);
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+}
+
+.logo img,
+.logo h1{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo h1 {
+    margin-left: 10px;
+    color: var(--color-highlight)
+}
+
+.logo img {
+    transition: transform 1.5s ease-in-out;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px 3vw;
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    transition: background-color 1s ease;
+    transition: border-color 1s ease;
+}
+
+nav a:hover {
+    border: 1px solid var(--color-highlight);
+    background-color: var(--color-highlight);
+}
+
+.landing-page {
+    align-items: center;
+    padding: 8vh 5vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.login {
+    padding: 6vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 40%;
+    border-radius: 10px;
+    animation: enterFromLeft 1.5s ease-in-out forwards;
+}
+
+.login h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.login p {
+    margin-bottom: 5vh;
+}
+
+form {
+    margin: 0;
+    text-align: left;
+    border-radius: 10px;
+}
+
+label {
+    color: var(--color-highlight);
+}
+
+button {
+    margin: auto;
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background-color: var(--color-main);
+    border: 1px solid;
+    border-radius: 10px;
+    transition: background-color 1s ease;
+    transition: border-color 1s ease;
+}
+
+button:hover {
+    background-color: var(--color-highlight);
+    border: 1px solid var(--color-highlight);
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: none;
+    background-color:white;
+}
+
+.showPass {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.showPass input {
+    width: max-content;
+    padding: 0;
+    margin: 0 2% 0 0;
+    align-items: baseline;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+.message {
+    border: 1px;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.error {
+    color: #E3242B;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.content {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 5vw;
+    animation: showUp 2s ease-in-out forwards;
+}
+
+footer {
+    text-align: center;
+    padding: 2vh;
+}
+
+.about-page {
+    flex-direction: column;
+}
+
+.profile {
+    width: 100%;
+    background-image: url("bg-zaga.jpg");
+    background-size: cover;
+    padding: 24vh 5vw;
+    box-sizing: border-box;
+    background-position: right;
+    animation: enterFromLeft 1.5s ease-in-out forwards;
+}
+
+.profile p:first-child {
+    color: var(--color-highlight);
+    font-weight: 700;
+    font-size: 4rem;
+    width: 60%;
+    margin: 0;
+    margin-bottom: 1em;
+    animation: enterFromLeft 1.5s ease-in-out forwards;
+}
+
+.nav-about a {
+    margin: 0;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px 2vw;
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+}
+
+.nav-about a:hover {
+    border: 1px solid var(--color-highlight);
+    background-color: var(--color-highlight);
+}
+
+#aboutme {
+    display: flex;
+    justify-content: space-between;
+    padding: 5vw;
+    align-items: center;
+}
+
+#aboutme img {
+    border-radius: 50%;
+    background-image: url(logo-zaga.png);
+    background-size: cover;
+    background-position: center;
+    transition: width 0.5s ease-in-out;
+}
+
+#aboutme img:hover {
+    width: 28%;
+}
+
+#aboutme article {
+    margin-left: 2vw;
+    padding: 0 0 0 5vw;
+}
+
+h3 {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    color: var(--color-highlight);
+}
+
+#aboutme p {
+    text-align: justify;
+    text-align-last: left;
+    font-size: 1.2rem;
+}
+
+#education {
+    background-color: var(--color-secondary);
+    padding: 5vw;
+}
+
+#education h4 {
+    font-size: 1.1rem;
+    background-color: var(--color-highlight);
+    padding: 10px;
+}
+
+#education p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.details li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: 100;
+    list-style: disc;
+}
+
+#experience {
+    padding: 5vw;
+    text-align: center;
+}
+
+#experience table {
+    margin: auto;
+    margin-top: 40px;
+}
+
+#experience table td {
+    padding-right: 8vw;
+    padding-left: 8vw;
+    padding-bottom: 8px;
+}
+
+#experience tr:first-child {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+#experience tr:nth-child(2) {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+#experience tr:nth-child(3) {
+    font-size: 0.75rem;
+}
+
+@media screen and (max-width: 900px) {
+    .landing-page {
+        flex-direction: column;
+    }
+
+    .login {
+        width: 70%;
+    }
+
+    #aboutme {
+        flex-direction: column;
+        padding: 1.5vw 5vw;
+    }
+
+    #aboutme img {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    #aboutme img:hover {
+        width: 55%;
+    }
+
+    #aboutme article {
+        text-align: center;
+        margin: 0;
+        padding: 1vw;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 1vh 0;
+    }
+
+    .nav-about a {
+        margin: 1vh 0;
+    }
+
+    #aboutme p {
+        font-size: 1rem;
+    }
+
+    .details li {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .profile p:first-child {
+        font-size: 3rem;
+    }
+
+    #experience tr:first-child {
+        font-size: 1rem;
+    }
+
+    #experience tr:nth-child(2) {
+        font-size: 0.75rem;
+    }
+    
+    #experience tr:nth-child(3) {
+        font-size: 0.7rem;
+    }
+
+}
+
+@keyframes enterFromLeft {
+    from {
+        opacity: 0; 
+        transform: translateX(-100%); 
+    }
+    80% {
+        transform: translateX(+5%);
+    }
+    90% {
+        transform: translateX(-2%);
+    }
+    to {
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+@keyframes showUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;  
+    }
+}
